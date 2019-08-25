@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <title>BREWDOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans|Source+Sans+Pro:600,900" rel="stylesheet">
+  
+</head>
+
+<div id='app'>
+
+  <body>
+
+    <nav v-bind:class="active" v-on:click.prevent>
+      <img id='logo' src='img/brewdog-logo.png' height=40px>
+      <router-link to="/" class="home" v-on:click.native="activate('home')">HOME</router-link>
+      <router-link to="/random" class="random" v-on:click.native="activate('random')">RANDOM</router-link>
+      <router-link to="/categories" class="categories" v-on:click.native="activate('categories')">CATEGORIES</router-link>
+    </nav>
+    <!-- / nav bar -->
+
+    <router-view></router-view>
+   
+    <footer>
+      <p>All recipes from Brewdog's DIY Dog. Contact hello@brewdog.com.</p>
+    </footer>
+    <!-- / footer -->
+
+
+  </body>
+
+</div>
+
+<script src="./dist/build.js"></script>
+</html>

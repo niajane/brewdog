@@ -1,0 +1,389 @@
+html
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding-top: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+h3{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+footer {
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  font-size: 13px;
+}
+
+.loadBtn{
+  width: 110px;
+  height: 40px;
+  margin: 0 50%;
+  margin-bottom: 20px;
+  color:black;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid grey;
+  border-radius: 2px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/* ==========================================================================
+   Nav Bar
+   ========================================================================== */
+
+
+nav{
+  position: fixed;
+  background-color: black;
+  font-size: 18px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
+  padding: 0;
+  top: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#logo,
+nav a {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 16px;
+  padding: 10px 10px;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover{
+  color: rgb(3,173,230);
+}
+
+nav.home .home,
+nav.categories .categories,
+nav.random .random{
+  color: #D98324 ;
+}
+/* to change background colour of active option*/
+
+
+/* ==========================================================================
+   Hero Image
+   ========================================================================== */
+
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/beers.jpeg');
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+
+.card-title {
+  font-size: 21px;
+  font-family: 'Fjalla One', sans-serif;
+  /*padding: .5rem;*/
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: 0;
+}
+
+.card-abv {
+  font-size: 13px;
+  text-align: center;
+  padding-top: 2px;
+  margin: 0;
+}
+
+.card-tagline {
+  font-size: 14px;
+  padding: 5 rem;
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  position: relative;
+}
+
+.card-img {
+  padding: 10px;
+  display: block;
+  margin: 1rem auto 2rem;
+}
+
+.card-detail {
+  position: fixed;
+  width: 60%;
+  height: 75%;
+  background-color: rgb(3,173,230);
+  top: 20%;
+  left: 20%;
+}
+
+
+/* ==========================================================================
+   Category Menu
+   ========================================================================== */
+
+.cat-menu{
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  overflow-x: hidden;
+}
+
+.cat-menu li{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.cat-menu li:hover{
+  color: rgb(3,173,230);
+}
+
+.cat-content {
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+.cat-menu.pale .pale,
+.cat-menu.ipa .ipa,
+.cat-menu.lager .lager,
+.cat-menu.wheat .wheat,
+.cat-menu.stout .stout, 
+.cat-menu.belgian .belgian,
+.cat-menu.pilsner .pilsner,
+.cat-menu.sour .sour,
+.cat-menu.red .red,
+.cat-menu.porter .porter,
+.cat-menu.scotch .scotch,
+.cat-menu.other .other{
+  color: #D98324 ;
+}
+/* changes background of active category*/
+
+
+/* ==========================================================================
+   Home Page Sort Menu
+   ========================================================================== */
+
+
+.dropbtn {
+  color:black;
+  width: 150px;
+  margin: 10px;
+  padding: 7px;
+  font-size: 16px;
+  border: 1px solid grey;
+  border-radius: 2px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: rgb(3,173,230);
+}
+
+.dropdown-content.ABVlow .ABVlow,
+.dropdown-content.ABVhigh .ABVhigh,
+.dropdown-content.dateNew .dateNew,
+.dropdown-content.dateOld .dateOld,
+.dropdown-content.name .name{
+  color: #D98324 ;
+}
+/*changes background of active selection*/
+
+
+/* ==========================================================================
+   Detail Page
+   ========================================================================== */
+
+
+.detail-id {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+  color: darkgray;
+  padding-left:5px;
+  margin-top: 60px;
+}
+.detail-title {
+  text-transform: uppercase;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 70px;
+  margin: 0;
+  padding: 0;
+  padding-left: 5px;
+}
+
+.detail-tagline {
+  text-transform: uppercase;
+  font-size: 50px;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.detail-description{
+  color: rgb(110, 109, 109);
+}
+
+.detail-img {
+  height: 700px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detail-section-title {
+  border-bottom: 5px solid black;
+}
+
+.column {
+  box-sizing: border-box;
+  float:left;
+  width: 33.3%;
+  padding: 15px;
+}
+
+@media screen and (max-width: 900px) {
+  .column {
+    width: 100%;
+  }
+}
+
+table {
+  background-color: whitesmoke;
+  border-top: 5px solid black;
+  border-radius: 2px;
+  text-align: left;
+  padding: 10px;
+  width: 100%;
+}
+
+th{
+  text-transform: uppercase;
+  text-align: left;
+}
+
+td{
+  text-align: right;
+  height: 40px;
+}
+
+th,
+td{
+  border-bottom: 1px solid #ddd;
+}
+
+.table-header{
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 20px;
+  padding-top: 7px;
+  padding-bottom: 3px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* ==========================================================================
+   Random Page
+   ========================================================================== */
+
+.random-button {
+  color:black;
+  font-size: 16px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 20px;
+}
